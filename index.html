@@ -33,7 +33,7 @@
         <a href="#servicos" class="text-dark text-decoration-none hover">Serviços</a>
         <a href="#sobre" class="text-dark text-decoration-none hover">Sobre</a>
         <a href="#contato" class="text-dark text-decoration-none hover">Contato</a>
-        <a href="#projeto" class="btn btn-success text-light px-4 hover">Iniciar Projeto</a>
+        <a href="https://wa.me/5585992865830?text=Oi%2C%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o." target="_blank" rel="noopener noreferrer" class="btn btn-success text-light px-4 hover">Fale Conosco</a>
       </nav>
     </div>
 
@@ -44,7 +44,7 @@
         <a href="#servicos" class="text-dark text-decoration-none">Serviços</a>
         <a href="#sobre" class="text-dark text-decoration-none">Sobre</a>
         <a href="#contato" class="text-dark text-decoration-none">Contato</a>
-        <a href="#projeto" class="btn btn-success text-light px-4">Iniciar Projeto</a>
+        <a href="https://wa.me/5585992865830?text=Oi%2C%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o." target="_blank" rel="noopener noreferrer" class="btn btn-success text-light px-4">Iniciar Projeto</a>
       </div>
     </div>
   </header>
@@ -52,7 +52,7 @@
   <!-- section -->
 
   <section id="inicio" class="pt-5 pb-4 bg-custom-gradient marg">
-    <div class="container px-4">
+    <div class="container px-4 py-5">
       <div class="row align-items-center">
         <!-- Texto à esquerda -->
         <div class="col-lg-6 mb-5 mb-lg-0 fade-in">
@@ -73,7 +73,7 @@
           </p>
 
           <div class="d-flex flex-column flex-sm-row gap-3 mb-4">
-            <a href="#" class="btn btn-lg btn-success text-white px-4 py-2">
+            <a href="https://wa.me/5585992865830?text=Oi%2C%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o." target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-success text-white px-4 py-2">
               Solicite um diagnóstico agora
               <i class="bi bi-arrow-right ms-2"></i>
             </a>
@@ -114,7 +114,7 @@
   <!--section de serviços-->
 
   <section id="servicos" class="py-5 bg-white">
-    <div class="container px-4">
+    <div class="container px-4 py-5">
       <div class="text-center mb-5">
         <h2 class="display-5 fw-bold text-dark mb-3">
           Nossos
@@ -218,7 +218,7 @@
   <!-- section sobre -->
 
   <section id="sobre" class="py-5 bg-custom-about-gradient">
-    <div class="container px-4">
+    <div class="container px-4 py-5">
       <div class="row align-items-center g-5">
         <!-- Texto -->
         <div class="col-lg-6">
@@ -313,7 +313,7 @@
 <!-- section contato -->
 
 <section id="contato" class="py-5 bg-white">
-  <div class="container px-4">
+  <div class="container px-4 py-5">
     <div class="text-center mb-5">
       <h2 class="display-5 fw-bold text-dark mb-3">
         Entre em
@@ -366,25 +366,27 @@
         <div class="card border-0 shadow">
           <div class="card-body p-4">
             <h5 class="card-title fw-bold mb-4">Envie sua mensagem</h5>
-            <form>
+            <form  action="https://formsubmit.co/ajax/juliordg@gmail.com"
+            method="POST"
+            data-form>
               <div class="row mb-3">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Nome" required>
+                  <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" required>
                 </div>
                 <div class="col">
-                  <input type="email" class="form-control" placeholder="Email" required>
+                  <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
                 </div>
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Empresa">
+                <input type="text" name="empresa" id="empresa" class="form-control" placeholder="Empresa">
               </div>
               <div class="mb-3">
-                <input type="tel" class="form-control" placeholder="Telefone">
+                <input type="tel" name="telefone" id="telefone" class="form-control" placeholder="Telefone">
               </div>
               <div class="mb-3">
-                <textarea class="form-control" rows="5" placeholder="Conte-nos sobre seu projeto..." required></textarea>
+                <textarea name="mensagem" id="mensagem" class="form-control" rows="5" placeholder="Conte-nos sobre seu projeto..." required></textarea>
               </div>
-              <button type="submit" class="btn w-100 text-white btn-gradient">
+              <button type="submit" class="btn w-100 text-white btn-gradient" data-button>
                 Enviar Mensagem
                 <i class="bi bi-send ms-2"></i>
               </button>
@@ -447,6 +449,11 @@
 
   <!-- Bootstrap Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--  script para formsubmit-->
+  <script src="app.js"></script>
+  
+
 </body>
 
 </html>
