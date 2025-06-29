@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="img/mouse2.png" />
+    <title>Protfólio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card-img-top {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .card-img-top:hover {
+            transform: scale(1.05);
+        }
+
+        .modal-img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body class=" text-light">
+    <!-- Header com menu responsivo -->
+    <header class="bg-light fixed-top shadow-sm border-bottom">
+        <div class="container py-3 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="img/mouse2.png" alt="RMHtecnologia Logo" width="40" height="40" class="me-2 rounded" />
+                <span class="fs-4 fw-bold text-success">Tech Service</span>
+            </div>
+
+            <!-- Botão menu mobile -->
+            <button class="btn btn-outline-success d-md-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuMobile" aria-controls="menuMobile" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <!-- Menu desktop -->
+            <nav class="d-none d-md-flex gap-4 align-items-center">
+                <a href="index.html" class="text-dark text-decoration-none hover">Início</a>
+                <a href="index.html" class="text-dark text-decoration-none hover">Serviços</a>
+                <a href="index.html" class="text-dark text-decoration-none hover">Sobre</a>
+                <a href="index.html" class="text-dark text-decoration-none hover">Contato</a>
+                <a href="https://wa.me/5585992865830?text=Oi%2C%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o."
+                    target="_blank" rel="noopener noreferrer" class="btn btn-success text-light px-4 hover">Fale
+                    Conosco</a>
+            </nav>
+        </div>
+
+        <!-- Menu mobile -->
+        <div class="collapse bg-light" id="menuMobile">
+            <div class="container d-flex flex-column py-3 gap-2">
+                <a href="#inicio" class="text-dark text-decoration-none">Início</a>
+                <a href="#servicos" class="text-dark text-decoration-none">Serviços</a>
+                <a href="#sobre" class="text-dark text-decoration-none">Sobre</a>
+                <a href="#contato" class="text-dark text-decoration-none">Contato</a>
+                <a href="https://wa.me/5585992865830?text=Oi%2C%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o."
+                    target="_blank" rel="noopener noreferrer" class="btn btn-success text-light px-4">Iniciar
+                    Projeto</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="text-center mb-5 pt-5 pb-4 bg-custom-gradient marg">
+        <h2 class="display-5 fw-bold text-dark mb-3">
+            Segurança
+            <span class="text-gradient">Eletrônica CFTV</span>
+        </h2>
+
+        <section class="mt-5 container">
+            <div class="row row-cols-2 row-cols-md-4 g-4">
+
+                <!-- Produto 1 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="img/cftv1.png" class="card-img-top" alt="Nike" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this.src)">
+                        <div class="card-body">
+                            <p class="card-text">Manutenção em Altura </p>
+                            <p class="card-text">Especialistas em manutenção de CFTV com plataformas elevatórias </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="img/cftv2.png" class="card-img-top" alt="Nike" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this.src)">
+                        <div class="card-body">
+                            <p class="card-text">Quadro de Comando de Video</p>
+                            <p class="card-text">Organização e eficiência para sistemas CFTV e redes </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="img/cftv3.png" class="card-img-top" alt="Nike" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this.src)">
+                        <div class="card-body">
+                            <p class="card-text">Tenis</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="img/cftv4.png" class="card-img-top" alt="Nike" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this.src)">
+                        <div class="card-body">
+                            <p class="card-text">Tenis</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal para imagem ampliada -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" class="modal-img" src="" alt="Imagem Ampliada">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function enlargeImage(src) {
+            document.getElementById('modalImage').src = src;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
